@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ssssssss</title>
+	</head>
+	<style>
+		.address-choose { display: inline-block; position: relative; margin-right: 6px; padding: 0 22px 0 12px; height: 24px; line-height: 24px; border: 1px solid #e4e4e4; border-radius: 2px; cursor: pointer; text-decoration: none; }
+		.address-choose:before { content: ''; display: inline-block; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #666; position: absolute; top: 10px; right: 6px; transition: transform .2s ease-in 0s; }
+		.address-choose.active:before { border-top-color: #e3393c; transform: rotate(180deg); }
+		.address-choose.active { border-bottom: none 0; z-index: 200; background-color: #fff; }
+		.himall-district { position: absolute; width: 470px; background-color: #fff; border: 1px solid #e4e4e4; z-index: 100; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); margin-top: -1px; }
+		.district-hd { margin: 14px 10px 0; height: 23px; border-bottom: 1px solid #e3393c; width: 455px; }
+		.district-hd span { border: 1px solid #e0e0e0; border-bottom: none; padding: 0 10px; height: 22px; line-height: 22px; display: inline-block; margin: 0 5px; background-color: #fff; float: left; cursor: pointer;max-width: 106px; overflow: hidden}
+		.district-hd span.cur { border-color: #e3393c; border-top-width: 2px; color: #e3393c; }
+		.himall-district .district-ul { border-top: 0; width: 420px; display: block; padding: 10px; }
+		.himall-district .district-ul li { float: left; line-height: 22px; height: 22px; overflow: hidden; margin: 3px 1px 0; padding: 0; width: 82px; cursor: pointer; }
+		.himall-district .district-ul li a { display: block; float: left; padding: 0 12px; line-height: 21px; white-space: nowrap; text-decoration: none; height: 22px; }
+	</style>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/Region.js"></script>
+	<script src="js/jquery.himallDistrict.js"></script>
+	
+	<body>
+		
+		<div class="address-choose" id="addressChoose">atasd as </div>
+		
+		<script>
+			$('#addressChoose').click(function () {
+		        $(this).himallDistrict({
+		        	items: province,
+		        	closeFn: function () {
+		        		
+		        	}
+		        });
+		    });
+		</script>
+	</body>
+</html>
